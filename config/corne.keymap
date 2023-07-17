@@ -72,19 +72,19 @@
 
         lower_layer {
             bindings = <
-&bt BT_CLR            &kp F1             &kp F2              &kp F3                &kp F4        &kp F5      &kp F6            &kp F7        &kp F8            &kp F9        &kp F10  &trans
-    &trans  &bhm LGUI C_PREV  &bhm LCTRL C_NEXT  &bhm LALT C_VOL_DN  &bhm LSHIFT C_VOL_UP      &kp C_PP    &kp LEFT  &bhm RSHIFT DOWN  &bhm LALT UP  &bhm RCTRL RIGHT  &bhm RGUI F11  &trans
-    &trans      &bt BT_SEL 0       &bt BT_SEL 1        &bt BT_SEL 2          &bt BT_SEL 3  &bt BT_SEL 4      &trans            &trans        &trans            &trans        &kp F12  &trans
-                                                           &kp LGUI                &trans     &kp SPACE     &kp RET            &trans      &kp RALT
+&kp C_BRI_INC           &kp F1             &kp F2            &kp F3                 &kp F4            &kp F5      &kp F6            &kp F7        &kp F8            &kp F9        &kp F10  &kp C_VOL_UP
+ &kp C_BRI_DN  &bhm LGUI PSCRN  &bhm LCTRL INSERT  &bhm LALT SYSREQ  &bhm LSHIFT C_AC_BACK  &kp C_AC_FORWARD    &kp LEFT  &bhm RSHIFT DOWN  &bhm RALT UP  &bhm RCTRL RIGHT  &bhm RGUI F11  &kp C_VOL_DN
+   &bt BT_CLR     &bt BT_SEL 0       &bt BT_SEL 1      &bt BT_SEL 2           &bt BT_SEL 3      &bt BT_SEL 4    &kp HOME         &kp PG_DN     &kp PG_UP           &kp END        &kp F12    &kp C_MUTE
+                                                           &kp LGUI                &kp DEL         &kp SPACE     &kp RET            &trans      &kp RALT
             >;
         };
 
         raise_layer {
             bindings = <
-&trans      &kp EXCL         &kp AT      &kp HASH        &kp DLLR  &kp PRCNT    &kp CARET        &kp AMPS  &kp KP_MULTIPLY       &kp LPAR      &kp RPAR     &trans
-&trans  &bhm LGUI N1  &bhm LCTRL N2  &bhm LALT N3  &bhm LSHIFT N4     &kp N5       &kp N6  &bhm RSHIFT N7     &bhm LALT N8  &bhm RCTRL N9  &bhm RGUI N0     &trans
-&trans       &kp ESC       &kp PLUS     &kp MINUS       &kp EQUAL  &kp UNDER     &kp LBKT        &kp RBKT         &kp BSLH       &kp LBRC      &kp RBRC  &kp TILDE
-                                           &trans          &trans     &trans       &trans          &trans           &trans
+ &none      &kp EXCL         &kp AT      &kp HASH        &kp DLLR  &kp PRCNT    &kp CARET        &kp AMPS  &kp ASTERISK       &kp LPAR       &kp RPAR     &trans
+&trans  &bhm LGUI N1  &bhm LCTRL N2  &bhm LALT N3  &bhm LSHIFT N4     &kp N5       &kp N6  &bhm RSHIFT N7  &bhm LALT N8  &bhm RCTRL N9   &bhm RGUI N0     &trans
+&trans       &kp ESC       &kp PLUS     &kp MINUS       &kp EQUAL  &kp UNDER     &kp LBKT        &kp RBKT      &kp LBRC       &kp RBRC  &kp BACKSLASH  &kp TILDE
+                                           &trans          &trans     &trans       &trans          &trans        &trans
             >;
         };
     };
