@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -80,10 +81,10 @@
 
         raise_layer {
             bindings = <
-&trans  &kp EXCL      &kp AT         &kp HASH      &kp DLLR        &kp PRCNT    &kp CARET  &kp AMPS        &kp ASTERISK  &kp LPAR       &kp RPAR       &kp PIPE
-&trans  &bhm LGUI N1  &bhm LCTRL N2  &bhm LALT N3  &bhm LSHIFT N4  &kp N5       &kp N6     &bhm RSHIFT N7  &bhm LALT N8  &bhm RCTRL N9  &bhm RGUI N0   &kp PLUS
-&trans  &kp PIPE      &kp PLUS       &kp MINUS     &kp EQUAL       &kp UNDER    &kp LBKT   &kp RBKT        &kp LBRC      &kp RBRC       &kp BACKSLASH  &kp TILDE
-                                     &trans        &kp SPACE       &kp DEL      &trans     &kp ENTER       &kp ESC
+&mkp RCLK  &kp EXCL      &kp AT         &kp HASH      &kp DLLR        &kp PRCNT    &kp CARET  &kp AMPS        &kp ASTERISK  &kp LPAR       &kp RPAR       &kp PIPE
+&mkp MCLK  &bhm LGUI N1  &bhm LCTRL N2  &bhm LALT N3  &bhm LSHIFT N4  &kp N5       &kp N6     &bhm RSHIFT N7  &bhm LALT N8  &bhm RCTRL N9  &bhm RGUI N0   &kp PLUS
+&mkp LCLK  &kp PIPE      &kp PLUS       &kp MINUS     &kp EQUAL       &kp UNDER    &kp LBKT   &kp RBKT        &kp LBRC      &kp RBRC       &kp BACKSLASH  &kp TILDE
+                                        &trans        &kp SPACE       &kp DEL      &trans     &kp ENTER       &kp ESC
             >;
         };
 
