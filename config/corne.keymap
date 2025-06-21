@@ -101,10 +101,10 @@
 
         default_layer {
             bindings = <
-&kp PLUS   &kp Q        &kp W         &kp E             &kp R          &kp T           &kp Y           &kp U          &kp I             &kp O         &kp P           &kp BACKSLASH
-&kp MINUS  &bhm LGUI A  &bhm LCTRL S  &bhm LALT D       &bhm LSHIFT F  &bhm RCTRL G    &bhm LCTRL H    &bhm RSHIFT J  &bhm LALT K       &bhm RCTRL L  &bhm RGUI SEMI  &kp EQUAL
-&kp ESC    &bhm LGUI Z  &bhm LCTRL X  &bhm LSHIFT C     &bhm LSHFT V   &kp B           &kp N           &kp M          &kp COMMA         &kp DOT       &kp FSLH        &kp GRAVE
-                                      &danish_or 0 TAB  &lt 3 SPACE    &kp BSPC        &bhm LSHFT SQT  &lt 4 RET      &bhm RCTRL UNDER
+&kp PLUS   &kp Q        &kp W         &kp E             &kp R          &kp T       &kp Y           &kp U          &kp I             &kp O         &kp P           &kp BACKSLASH
+&kp MINUS  &bhm LGUI A  &bhm LCTRL S  &bhm LALT D       &bhm LSHIFT F  &kp G       &kp H           &bhm RSHIFT J  &bhm LALT K       &bhm RCTRL L  &bhm RGUI SEMI  &kp EQUAL
+&kp ESC    &bhm LGUI Z  &bhm LALT X   &bhm LSHIFT C     &bhm LCTRL V   &kp B       &kp N           &kp M          &kp COMMA         &kp DOT       &kp FSLH        &kp GRAVE
+                                      &danish_or 0 TAB  &lt 3 SPACE    &kp BSPC    &bhm LSHFT SQT  &lt 4 RET      &bhm RCTRL UNDER
             >;
         };
 
@@ -121,7 +121,7 @@
             bindings = <
 &kp MINUS  &trans  &trans  &trans              &trans  &trans    &trans       &trans  &trans        &trans  &trans           &kp LBKT
 &kp SLASH  &kp A   &kp S   &kp D               &trans  &trans    &trans       &trans  &bhm RALT K   &kp L   &kp SEMI         &kp SQT
-&kp RBKT   &kp Z   &kp X   &kp C               &kp V   &trans    &trans       &trans  &trans        &trans  &dk_slash_qmark  &dk_accent_tilde
+&kp RBKT   &kp Z   &kp X   &trans              &trans  &trans    &trans       &trans  &trans        &trans  &dk_slash_qmark  &dk_accent_tilde
                            &bhm RIGHT_ALT TAB  &trans  &trans    &dk_sqt_dqt  &trans  &kp QUESTION
             >;
         };
@@ -142,6 +142,15 @@
 &bt BT_CLR     &bt BT_SEL 0     &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3           &bt BT_SEL 4        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp F12        &kp C_MUTE
                                                    &toggle_danish    &trans                 &kp DELETE          &trans    &trans     &kp ESC
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        raise_lower_mouse {
+            if-layers = <3 4>;
+            then-layer = <1>;
         };
     };
 };
