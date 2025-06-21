@@ -2,10 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: danmou
+      url-base: https://github.com/danmou
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-hid-trackball-interface
+      remote: danmou
+      revision: main
   self:
     path: config
