@@ -110,10 +110,10 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp RCLK  &trans  &mkp LCLK    &trans  &trans  &trans
+&tb_bootloader  &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&tb_cyc_dpi     &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&tb_tg_scroll   &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                                &mkp RCLK  &mkp MCLK  &mkp LCLK    &trans  &trans  &trans
             >;
         };
 
