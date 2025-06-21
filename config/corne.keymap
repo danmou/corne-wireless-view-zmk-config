@@ -51,6 +51,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        dk_accent_tilde: dk_accent_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DK_ACCENT_TILDE";
+            bindings = <&kp EQUAL>, <&kp RBKT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RALT)>;
+            keep-mods = <(MOD_RALT)>;
+        };
     };
 
     macros {
@@ -70,7 +80,12 @@
         toggle_danish: toggle_danish {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &tog 1>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(SPACE) &tog 1>,
+                <&macro_release>,
+                <&kp CAPS>;
+
             label = "TOGGLE_DANISH";
         };
     };
@@ -89,10 +104,10 @@
 
         danish {
             bindings = <
-&kp MINUS  &trans  &trans  &trans  &trans  &trans    &trans       &trans  &trans        &trans  &trans           &kp LBKT
-&kp SLASH  &kp A   &kp S   &kp D   &kp F   &kp G     &kp H        &kp J   &kp K         &kp L   &kp SEMI         &kp SQT
-&kp RBKT   &kp Z   &kp X   &kp C   &kp V   &trans    &trans       &trans  &trans        &trans  &dk_slash_qmark  &kp EQUAL
-                           &trans  &trans  &trans    &dk_sqt_dqt  &trans  &kp QUESTION
+&kp MINUS  &trans  &trans  &trans              &trans  &trans    &trans       &trans  &trans        &trans  &trans           &kp LBKT
+&kp SLASH  &kp A   &kp S   &kp D               &trans  &trans    &trans       &trans  &bhm RALT K   &kp L   &kp SEMI         &kp SQT
+&kp RBKT   &kp Z   &kp X   &kp C               &kp V   &trans    &trans       &trans  &trans        &trans  &dk_slash_qmark  &dk_accent_tilde
+                           &bhm RIGHT_ALT TAB  &trans  &trans    &dk_sqt_dqt  &trans  &kp QUESTION
             >;
         };
 
