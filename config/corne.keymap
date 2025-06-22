@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &hid_trackball_interface {
-    automouse-layer = <1>;
+    automouse-layer = <4>;
     automouse-layer-timeout-ms = <400>;
 };
 
