@@ -102,17 +102,17 @@
         default_layer {
             bindings = <
 &kp PLUS   &kp Q        &kp W         &kp E             &kp R          &kp T       &kp Y           &kp U          &kp I             &kp O         &kp P           &kp BACKSLASH
-&kp MINUS  &bhm LGUI A  &bhm LCTRL S  &bhm LALT D       &bhm LSHIFT F  &kp G       &kp H           &bhm RSHIFT J  &bhm LALT K       &bhm LCTRL L  &bhm RGUI SEMI  &kp EQUAL
+&kp MINUS  &bhm LGUI A  &bhm LCTRL S  &bhm LALT D       &bhm LSHIFT F  &kp G       &kp H           &bhm RSHIFT J  &bhm RALT K       &bhm LCTRL L  &bhm RGUI SEMI  &kp EQUAL
 &kp ESC    &bhm LGUI Z  &bhm LALT X   &bhm LSHIFT C     &bhm LCTRL V   &kp B       &kp N           &kp M          &kp COMMA         &kp DOT       &kp FSLH        &kp GRAVE
-                                      &danish_or 0 TAB  &lt 2 SPACE    &kp BSPC    &bhm LSHFT SQT  &lt 3 RET      &bhm LCTRL UNDER
+                                      &danish_or 0 TAB  &lt 2 SPACE    &kp BSPC    &bhm LSHFT SQT  &lt 3 RET      &bhm RCTRL UNDER
             >;
         };
 
         danish {
             bindings = <
 &kp MINUS  &trans  &trans  &trans              &trans  &trans    &trans       &trans  &trans        &trans  &trans           &kp LBKT
-&kp SLASH  &kp A   &kp S   &kp D               &trans  &trans    &trans       &trans  &bhm RALT K   &kp L   &kp SEMI         &kp SQT
-&kp RBKT   &kp Z   &kp X   &trans              &trans  &trans    &trans       &trans  &trans        &trans  &dk_slash_qmark  &dk_accent_tilde
+&kp SLASH  &trans  &trans  &trans              &trans  &trans    &trans       &trans  &trans        &trans  &trans           &kp SQT
+&kp RBKT   &trans  &trans  &trans              &trans  &trans    &trans       &trans  &trans        &trans  &dk_slash_qmark  &dk_accent_tilde
                            &bhm RIGHT_ALT TAB  &trans  &trans    &dk_sqt_dqt  &trans  &kp QUESTION
             >;
         };
@@ -131,7 +131,7 @@
 &kp C_BRI_INC  &kp F1           &kp F2             &kp F3            &kp F4                 &kp F5              &kp F6    &kp F7     &kp F8     &kp F9     &kp F10        &kp C_VOL_UP
 &kp C_BRI_DN   &bhm LGUI PSCRN  &bhm LCTRL INSERT  &bhm LALT SYSREQ  &bhm LSHIFT C_AC_BACK  &kp C_AC_FORWARD    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &bhm RGUI F11  &kp C_VOL_DN
 &bt BT_CLR     &bt BT_SEL 0     &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3           &bt BT_SEL 4        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp F12        &kp C_MUTE
-                                                   &toggle_danish    &trans                 &kp DELETE          &mo 4     &trans     &kp ESC
+                                                   &toggle_danish    &tog 5                 &kp DELETE          &mo 4     &trans     &kp ESC
             >;
         };
 
@@ -141,6 +141,15 @@
 &tb_cyc_dpi     &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &tb_tg_scroll   &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
                                 &mkp RCLK  &mkp MCLK  &mkp LCLK    &trans  &trans  &trans
+            >;
+        };
+
+        gaming {
+            bindings = <
+&trans    &kp Q  &kp W  &kp E           &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
+&kp CAPS  &kp A  &kp S  &kp D           &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &trans    &trans
+&trans    &kp Z  &kp X  &kp C           &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+                        &bhm LCTRL TAB  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
