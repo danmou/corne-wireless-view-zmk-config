@@ -67,6 +67,17 @@
             mods = <(MOD_RALT)>;
             keep-mods = <(MOD_RALT)>;
         };
+
+        gaming_lower_or: gaming_lower_or {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GAMING_LOWER_OR";
+            bindings = <&gaming_lower>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+        };
     };
 
     macros {
@@ -93,6 +104,25 @@
                 <&kp RCTRL>;
 
             label = "TOGGLE_DANISH";
+        };
+
+        gaming_lower: gaming_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&tog 5>,
+                <&macro_press>,
+                <&mo 3>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 3>,
+                <&macro_tap>,
+                <&tog 5>;
+
+            label = "GAMING_LOWER";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
     };
 
@@ -146,10 +176,10 @@
 
         gaming {
             bindings = <
-&kp TAB   &kp Q  &kp W  &kp E           &kp R      &kp T              &kp Y   &kp U        &kp I      &kp O    &kp P     &trans
-&kp CAPS  &kp A  &kp S  &kp D           &kp F      &kp G              &kp H   &kp J        &kp K      &kp L    &trans    &trans
-&trans    &kp Z  &kp X  &kp C           &kp V      &kp B              &kp N   &kp M        &kp COMMA  &kp DOT  &kp FSLH  &trans
-                        &bhm LCTRL TAB  &kp SPACE  &lt 6 BACKSPACE    &trans  &lt 3 ENTER  &trans
+&kp TAB   &kp Q  &kp W  &kp E           &kp R      &kp T              &kp Y   &kp U                     &kp I      &kp O    &kp P     &trans
+&kp CAPS  &kp A  &kp S  &kp D           &kp F      &kp G              &kp H   &kp J                     &kp K      &kp L    &trans    &trans
+&trans    &kp Z  &kp X  &kp C           &kp V      &kp B              &kp N   &kp M                     &kp COMMA  &kp DOT  &kp FSLH  &trans
+                        &bhm LCTRL TAB  &kp SPACE  &lt 6 BACKSPACE    &trans  &gaming_lower_or 0 ENTER  &trans
             >;
         };
 
